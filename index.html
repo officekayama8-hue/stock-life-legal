@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stock Life Privacy Policy</title>
+<style>
+  :root {
+    --bg: #f5faf7;
+    --surface: #ffffff;
+    --surface-alt: #eaf3ee;
+    --border: #dbe7e0;
+    --text: #182420;
+    --text-muted: #5a6961;
+    --accent: #2e7d6b;
+    --accent-soft: #e3f3ee;
+    --accent-contrast: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121815;
+      --surface: #1a2420;
+      --surface-alt: #212e28;
+      --border: #2c3c34;
+      --text: #e6ece9;
+      --text-muted: #9bb0a5;
+      --accent: #7fd1b9;
+      --accent-soft: #22392f;
+      --accent-contrast: #0d2018;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121815;
+    --surface: #1a2420;
+    --surface-alt: #212e28;
+    --border: #2c3c34;
+    --text: #e6ece9;
+    --text-muted: #9bb0a5;
+    --accent: #7fd1b9;
+    --accent-soft: #22392f;
+    --accent-contrast: #0d2018;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  header.doc-head {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+
+  .mark {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-contrast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .mark svg { width: 28px; height: 28px; }
+
+  .head-text .eyebrow {
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin: 0 0 4px;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 1.55rem;
+    margin: 0;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .updated {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 14px;
+    margin-bottom: 36px;
+    font-variant-numeric: tabular-nums;
+  }
+  .updated .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .lede {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 44px;
+    color: var(--text);
+    font-size: 0.98rem;
+  }
+  .lede strong { color: var(--accent); }
+
+  section.clause {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 4px 20px;
+    margin-bottom: 34px;
+  }
+
+  .clause-num {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--accent);
+    padding-top: 2px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .clause h2 {
+    grid-column: 2;
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+
+  .clause-body {
+    grid-column: 2;
+    color: var(--text);
+    font-size: 0.96rem;
+  }
+  .clause-body p { margin: 0 0 12px; }
+  .clause-body p:last-child { margin-bottom: 0; }
+
+  .clause-body ul {
+    margin: 10px 0 0;
+    padding-left: 1.2em;
+  }
+  .clause-body li {
+    margin-bottom: 8px;
+    color: var(--text-muted);
+  }
+  .clause-body li::marker { color: var(--accent); }
+
+  .data-table {
+    width: 100%;
+    overflow-x: auto;
+    margin: 14px 0 4px;
+  }
+  .data-table table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+  }
+  .data-table th, .data-table td {
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .data-table th {
+    background: var(--surface-alt);
+    color: var(--text-muted);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .data-table td { color: var(--text-muted); }
+
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 16px;
+    margin-top: 14px;
+    font-size: 0.92rem;
+    color: var(--text);
+  }
+  .callout .label {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 44px 0;
+    border: none;
+  }
+
+  footer {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+  footer .app-name {
+    font-weight: 700;
+    color: var(--text);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 480px) {
+    section.clause {
+      grid-template-columns: 1fr;
+    }
+    .clause-num { grid-column: 1; }
+    .clause h2, .clause-body { grid-column: 1; }
+  }
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <header class="doc-head">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="4" width="14" height="16" rx="2" fill="currentColor" fill-opacity="0.16"/>
+        <path d="M5 10h14" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M14 5.5v2.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M14 12v4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="head-text">
+      <p class="eyebrow">Privacy Policy</p>
+      <h1>Stock Life Privacy Policy</h1>
+    </div>
+  </header>
+
+  <span class="updated"><span class="dot"></span>Last updated: September 21, 2026</span>
+
+  <div class="lede">
+    OFFICE KAYAMA ("we," "us," or "the developer") operates the app <strong>Stock Life by Qualinex</strong> (the "App"). This Privacy Policy explains how we handle information in connection with the App.
+  </div>
+
+  <section class="clause">
+    <div class="clause-num">1</div>
+    <h2>Information We Collect</h2>
+    <div class="clause-body">
+      <p>The App stores the item data you enter (name, photo, quantity, storage location, expiry date, memo, category) only on your device. We do not collect or transmit this data to our servers.</p>
+      <div class="data-table">
+        <table>
+          <thead>
+            <tr><th>Type of data</th><th>Where it's stored</th><th>Sent externally?</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Item data (name, photo, quantity, storage location, expiry date, memo)</td><td>On-device database</td><td>No</td></tr>
+            <tr><td>Barcode number (when scanning)</td><td>Processed temporarily only</td><td>Sent to Open Food Facts</td></tr>
+            <tr><td>Selected food names (recipe suggestion feature)</td><td>On-device only</td><td>Shared to the external app you choose</td></tr>
+            <tr><td>Backup file (when exported)</td><td>On-device file</td><td>Only to the destination you choose to save or share it to</td></tr>
+            <tr><td>Selected food region(s) (US/UK/Canada/Australia)</td><td>On-device preference only</td><td>No</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">2</div>
+    <h2>Barcode Scanning &amp; Product Lookup</h2>
+    <div class="clause-body">
+      <p>The App's barcode scanning feature looks up the scanned number against the open food database "Open Food Facts" to automatically retrieve a product's name and image. Only the barcode number is transmitted - no name, device identifier, or other personal information is included.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">3</div>
+    <h2>"Ask AI for Recipe Ideas" Feature</h2>
+    <div class="clause-body">
+      <p>The App includes an optional "Ask AI for recipe ideas" feature. It uses Android's standard Share function to hand off the food names you select to an app you choose on your own device (e.g., ChatGPT, Gemini, or any app you have installed).</p>
+      <ul>
+        <li>The App itself never transmits this content to any server we operate.</li>
+        <li>You choose the destination app yourself, every time you use this feature.</li>
+        <li>Using this feature is entirely optional, and only the food names you select are shared.</li>
+        <li>How the destination app handles your data is governed by that app's own privacy policy.</li>
+      </ul>
+      <div class="callout">
+        <span class="label">How it works</span>
+        This is the same standard Android "Share" mechanism used when sharing a photo or note to another app. The App does not store or automatically choose a destination for what you share.
+      </div>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">4</div>
+    <h2>Subscription Payment Information</h2>
+    <div class="clause-body">
+      <p>
+        All features of the App are available through a subscription. Subscriptions are processed through Google Play Billing. Payment details such as your credit card number are managed by Google and are never collected or stored by us directly. We only receive information confirming whether you have an active subscription.
+      </p>
+      <p>
+        Please also review <a href="https://policies.google.com/privacy" style="color:var(--accent);" target="_blank" rel="noopener">Google's Privacy Policy</a> regarding the handling of payment information.
+      </p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">5</div>
+    <h2>Advertising &amp; Analytics</h2>
+    <div class="clause-body">
+      <p>The App does not display advertising and does not use any third-party analytics SDK.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">6</div>
+    <h2>Disclosure to Third Parties</h2>
+    <div class="clause-body">
+      <p>Except as described in Sections 2, 3, and 4 above, we do not disclose information obtained through the App to any third party.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">7</div>
+    <h2>Deleting Your Data</h2>
+    <div class="clause-body">
+      <p>You can delete any item or category at any time from within the App. Uninstalling the App removes all data stored on your device. Note that your subscription is tied to your Google account, so you'll need to cancel it separately through Google Play even after uninstalling the App.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">8</div>
+    <h2>Contact Us</h2>
+    <div class="clause-body">
+      <p>If you have any questions about this Privacy Policy, please contact us at:<br><a href="mailto:officekayama8@gmail.com" style="color:var(--accent);">officekayama8@gmail.com</a></p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">9</div>
+    <h2>Changes to This Policy</h2>
+    <div class="clause-body">
+      <p>We may update this Privacy Policy from time to time without prior notice. Material changes will be reflected by updating the "Last updated" date on this page.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <footer>
+    <span class="app-name">Stock Life by Qualinex</span> — Track your fridge stock and expiry dates with ease.<br>
+    Developed by OFFICE KAYAMA
+  </footer>
+</div>
+</body>
+</html>
